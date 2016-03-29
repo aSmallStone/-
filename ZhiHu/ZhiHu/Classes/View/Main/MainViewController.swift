@@ -13,23 +13,44 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addChildViewControllers()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+// MARK: - 设置界面
+extension MainViewController{
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    /// 添加所有控制器
+    private func addChildViewControllers(){
+        
+        addChildViewController(HomeTableViewController(), imageName: "Feed_Normal")
+        addChildViewController(DiscoverTableViewController(), imageName: "Find_Normal")
+        addChildViewController(MessageTableViewController(), imageName: "Notice_Normal")
+        addChildViewController(PersonalTableViewController(), imageName: "People_Normal")
+    
     }
-    */
+
+    /// 添加控制器
+    private func addChildViewController(vc: UIViewController, imageName: String) {
+        
+        tabBar.tintColor = UIColor.blueColor()
+        tabBar.backgroundColor = UIColor.whiteColor()
+        tabBar.alpha = 0.6
+        
+        // 设置图像
+        vc.tabBarItem.image = UIImage(named: imageName)//?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        
+        // 导航控制器
+        let nav = UINavigationController(rootViewController: vc)
+        
+        // 图像居中显示
+        nav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        
+        
+        addChildViewController(nav)
+   
+    }
 
 }
