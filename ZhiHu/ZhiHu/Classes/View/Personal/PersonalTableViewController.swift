@@ -87,8 +87,12 @@ class PersonalTableViewController: UITableViewController {
         
         // 设置 cell 样式
         if indexPath.section == 2 && indexPath.row == 1 {
+            
+            // 显示开关
+            cell.contentView.userInteractionEnabled = false
             cell.accessoryView = UISwitch()
         }else{
+            // 显示箭头
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
 
@@ -101,6 +105,16 @@ class PersonalTableViewController: UITableViewController {
             return rowHeight * 1.75
         }
         return rowHeight
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.section == 2 && indexPath.row == 1{
+        }else{
+            let title = person[indexPath.section].items[indexPath.row].title
+            let viewController = NewViewController(title: title!)
+            navigationController?.pushViewController(viewController, animated: false)
+            
+        }
     }
  
 
