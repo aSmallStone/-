@@ -12,6 +12,8 @@
 		C623BA351CA968E200498CF6 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623BA341CA968E200498CF6 /* HomeTableViewController.swift */; };
 		C623BA371CA9696700498CF6 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623BA361CA9696700498CF6 /* MessageTableViewController.swift */; };
 		C623BA391CA9697400498CF6 /* PersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623BA381CA9697400498CF6 /* PersonalTableViewController.swift */; };
+		C64460621CADB915005B3997 /* PersonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64460611CADB915005B3997 /* PersonItem.swift */; };
+		C64460641CADBE54005B3997 /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64460631CADBE54005B3997 /* PersonGroup.swift */; };
 		C6D158F31CA8E45400B5B991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D158F21CA8E45400B5B991 /* AppDelegate.swift */; };
 		C6D158FA1CA8E45400B5B991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D158F91CA8E45400B5B991 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		C623BA341CA968E200498CF6 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C623BA361CA9696700498CF6 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		C623BA381CA9697400498CF6 /* PersonalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTableViewController.swift; sourceTree = "<group>"; };
+		C64460611CADB915005B3997 /* PersonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItem.swift; sourceTree = "<group>"; };
+		C64460631CADBE54005B3997 /* PersonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
 		C6D158EF1CA8E45400B5B991 /* ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D158F21CA8E45400B5B991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D158F91CA8E45400B5B991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,9 +46,9 @@
 		C623BA261CA9659B00498CF6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C623BA281CA9659B00498CF6 /* Tools */,
 				C623BA291CA9659B00498CF6 /* View(视图和控制器) */,
 				C623BA271CA9659B00498CF6 /* Model */,
-				C623BA281CA9659B00498CF6 /* Tools */,
 				C623BA2F1CA9659B00498CF6 /* ViewModel */,
 			);
 			path = Classes;
@@ -53,6 +57,8 @@
 		C623BA271CA9659B00498CF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C64460611CADB915005B3997 /* PersonItem.swift */,
+				C64460631CADBE54005B3997 /* PersonGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,10 +228,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64460641CADBE54005B3997 /* PersonGroup.swift in Sources */,
 				C623BA351CA968E200498CF6 /* HomeTableViewController.swift in Sources */,
 				C623BA391CA9697400498CF6 /* PersonalTableViewController.swift in Sources */,
 				C6D158F31CA8E45400B5B991 /* AppDelegate.swift in Sources */,
 				C623BA371CA9696700498CF6 /* MessageTableViewController.swift in Sources */,
+				C64460621CADB915005B3997 /* PersonItem.swift in Sources */,
 				C623BA331CA9689100498CF6 /* DiscoverTableViewController.swift in Sources */,
 				C623BA311CA966C400498CF6 /* MainViewController.swift in Sources */,
 			);

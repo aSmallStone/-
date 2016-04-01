@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         addChildViewControllers()
@@ -20,21 +21,19 @@ class MainViewController: UITabBarController {
 // MARK: - 设置界面
 extension MainViewController{
     
-    
-    
     /// 添加所有控制器
     private func addChildViewControllers(){
         
         addChildViewController(HomeTableViewController(), imageName: "Feed_Normal")
         addChildViewController(DiscoverTableViewController(), imageName: "Find_Normal")
         addChildViewController(MessageTableViewController(), imageName: "Notice_Normal")
-        addChildViewController(PersonalTableViewController(), imageName: "People_Normal")
-    
+        addChildViewController(PersonalTableViewController(style: UITableViewStyle.Grouped), imageName: "People_Normal")
     }
 
     /// 添加控制器
     private func addChildViewController(vc: UIViewController, imageName: String) {
         
+        // 设置 TabBar属性
         tabBar.tintColor = UIColor.blueColor()
         tabBar.backgroundColor = UIColor.whiteColor()
         tabBar.alpha = 0.6
