@@ -38,6 +38,15 @@ class PersonalTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareTableView()
+        
+        // 设置导航栏标题
+        self.navigationItem.title = "个人"
+        
+    }
+    /// 准备 tableview
+    private func prepareTableView(){
+        
         // 注册可重用 cell
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
@@ -45,15 +54,8 @@ class PersonalTableViewController: UITableViewController {
         tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, 0, 1))
         tableView.sectionFooterHeight = 0
         tableView.sectionHeaderHeight = 15
-        
-        // 设置导航栏标题
-        self.navigationItem.title = "个人"
-        
-        // 加载数据模型
-        
-        
+    
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
